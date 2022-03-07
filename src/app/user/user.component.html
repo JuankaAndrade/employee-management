@@ -1,0 +1,31 @@
+<div class="col-md-6">
+    <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>id</th>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Cedula</th>
+      <th>Fecha de Nacimiento</th>
+      <th>Direccion Domicilio</th>
+      <th>Telefono movil</th>
+      <th>Estado de vacunación</th>
+      <th>Acciones</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employees">
+            <td>{{employee.empId}}</td>
+            <td>{{employee.nombres}}</td>
+            <td>{{employee.apellidos}}</td>
+            <td>{{employee.cedula}}</td>
+            <td>{{employee.born}}</td>
+            <td>{{employee.house}}</td>
+            <td>{{employee.movile}}</td>
+            <td>{{employee.vaccinated}}</td>
+            <td><button class="btn btn-warning" (click)="deleteEmployee(employee)"> Editar</button></td>
+            </tr>
+    </tbody>
+      </table>
+  
+</div>

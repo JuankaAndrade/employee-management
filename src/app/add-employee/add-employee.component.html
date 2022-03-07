@@ -1,0 +1,27 @@
+<div class="col-md-6">
+  <h2 class="text-center">Add Employee</h2>
+  <form  [formGroup] = "addForm">
+    <div class="form-group">
+      <label for="name">Nombres:</label>
+      <input type="name" [(ngModel)]="user.nombres" placeholder="Name" name="name" class="form-control" formControlName="nombres" id="name">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Apellidos:</label>
+      <input type="name" [(ngModel)]="user.apellidos" placeholder="Name" name="name" class="form-control" formControlName="apellidos" id="apellidos">
+    </div>
+  
+    <div class="form-group">
+      <label for="cedula">Cedula:</label>
+      <input [(ngModel)]="user.cedula" placeholder="Cedula" name="cedula" class="form-control" formControlName="cedula" id="cedula">
+    </div>
+  
+    <div class="form-group">
+      <label for="empId">Correo</label>
+      <input [(ngModel)]="user.correo" placeholder="Correo" name="correo" formControlName="correo" class="form-control" id="correo">
+    </div>
+   
+
+    <button class="btn btn-success" (click)="createEmployee()">Create</button>
+  </form>
+  </div>

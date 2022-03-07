@@ -1,0 +1,26 @@
+<div class="col-md-6">
+  <table class="table table-striped">
+  <thead>
+  <tr>
+    <th>id</th>
+    <th>Nombres</th>
+    <th>Apellidos</th>
+    <th>Cedula</th>
+    <th>correo</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let employee of employees">
+          <td>{{employee.empId}}</td>
+          <td>{{employee.nombres}}</td>
+          <td>{{employee.apellidos}}</td>
+          <td>{{employee.cedula}}</td>
+          <td>{{employee.correo}}</td>
+          <td><button class="btn btn-warning" (click)="deleteEmployee(employee)"> Editar</button></td>
+          <td><button class="btn btn-danger" (click)="deleteEmployee(employee)"> Borrar</button></td>
+          <td><button class="btn btn-success" (click)="letEmployee(employee)"> Dar de Alta</button></td>  
+        </tr>
+  </tbody>
+    </table>
+
+  </div>
